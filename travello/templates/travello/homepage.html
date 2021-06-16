@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}travello{% endblock title %}
+
+{% block content %}
+    <h1>Hello from home page</h1>
+    <div class="container">
+        <div class="row">
+        {% for place in places %}
+            <div class="col-md-4 mb-5">
+                <div class="card" style="width: 18rem, bg-danger,">
+                    <img src="{{ place.image.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ place.name }}</h5>
+                        <p class="card-text">{{ place.description }}</p>
+                        <a href="destination/{{ place.id }}" class="btn btn-primary">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

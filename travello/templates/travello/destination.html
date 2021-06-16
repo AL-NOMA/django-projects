@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %} {{ place.name }}{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md6">
+                <div class="card" style="width: 18rem, bg-danger,">
+                    <img src="{{ place.image.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ place.name }}</h5>
+                        <p class="card-text">{{ place.description }}</p>
+                        <a href="" class="btn btn-primary">Lire la suite</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

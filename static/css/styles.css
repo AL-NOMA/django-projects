@@ -1,0 +1,9 @@
+div.card {
+    height: 30rem;
+    overflow: hidden;
+}
+
+p.card-text {
+    height: 10rem;
+    overflow: hidden;
+}
